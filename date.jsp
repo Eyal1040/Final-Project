@@ -10,7 +10,7 @@
         <form action="show_data.jsp" method="get">
             <TABLE style="background-color: #ECE5B6;" WIDTH="50%">
                 <tr width="100%">
-                    <td >Student Name</td>
+                    <td >Student Nameaaaaaaaaaaaaaaaaaa</td>
                     <td ><input type="text" name="Name"></td>
                 </tr>
                 <tr>
