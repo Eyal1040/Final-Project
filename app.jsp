@@ -1,12 +1,10 @@
-!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
-"http://www.w3.org/TR/html4/loose.dtd"> 
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
 <html> 
     <head> 
         <title>Create table in mysql database using jsp By Eyal</title>
     </head> 
-    <body bgcolor="#ffffcc">
+    <body bgcolor="#fffffc">
         <form action="show_data.jsp" method="get">
             <TABLE style="background-color: #ECE5B6;" WIDTH="50%">
                 <tr width="100%">
