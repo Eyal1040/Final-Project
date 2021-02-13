@@ -1,6 +1,6 @@
-"http://www.w3.org/TR/html4/loose.dtd%22%3E 
-<%@ page import="java.sql." %> 
-<%@ page import="java.io." %> 
+<"http://www.w3.org/TR/html4/loose.dtd"> 
+<%@ page import="java.sql.*" %> 
+<%@ page import="java.io.*" %> 
 <html> 
     <head> 
         <title>Create table in mysql database using jsp By Yariv</title>
@@ -17,27 +17,27 @@
                     <td width="25%"><input type="radio" name="stream" 
                         value="B.Tech.">B.Tech.</td>
                     <td width="30%"><input type="radio" name="stream" value="MCA" 
-                        checked>MCA</td>
+					    checked>MCA</td>
                     <td width="25%"><input type="radio" name="stream" value="MBA">
-                        MBA</td>
+					    MBA</td>
                 </tr>
                 <tr>
                     <td>Branch</td>
                     <td><input type="radio" name="branch" value="CS" checked>
-                        CS</td>
+					    CS</td>
                     <td><input type="radio" name="branch" value="IT"> IT</td>
                     <td><input type="radio" name="branch" value="EC"> EC</td>
                 </tr>
                 <tr>
                     <td>Course Type</td>
                     <td><input type="radio" name="course" value="Regular" checked>
-                        Regular</td>
+					    Regular</td>
                     <td><input type="radio" name="course" value="Correspondance">
-                        Correspondance</td>
+					    Correspondance</td>
                     <td><input type="radio" name="course" value="Online"> Online</td>
                 </tr>
-                <tr><td></td><td></td>
-                <td><input type="submit" name="submit" value="submit"></td></tr>
+				<tr><td></td><td></td>
+				<td><input type="submit" name="submit" value="submit"></td></tr>
             </TABLE>
         </form>
     </body> 
