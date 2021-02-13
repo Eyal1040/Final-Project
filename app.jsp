@@ -1,14 +1,15 @@
+"http://www.w3.org/TR/html4/loose.dtd%22%3E 
 <%@ page import="java.sql." %> 
 <%@ page import="java.io." %> 
 <html> 
     <head> 
-        <title>Create table in mysql database using jsp By Eyal</title>
+        <title>Create table in mysql database using jsp By Yariv</title>
     </head> 
     <body bgcolor="#ffffcc">
         <form action="show_data.jsp" method="get">
             <TABLE style="background-color: #ECE5B6;" WIDTH="50%">
                 <tr width="100%">
-                    <td >Student Name</td>
+                    <td >Student Name AAAAABBBBBBBBBBBBBBBBBBBBBBBBaA</td>
                     <td ><input type="text" name="Name"></td>
                 </tr>
                 <tr>
