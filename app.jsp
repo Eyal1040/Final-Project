@@ -1,4 +1,4 @@
-<"http://www.w3.org/TR/html4/loose.dtd"> 
+<"Welcome to our Final-Project web site "> 
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
 <html> 
@@ -9,7 +9,7 @@
         <form action="show_data.jsp" method="get">
             <TABLE style="background-color: #ECE5B6;" WIDTH="50%">
                 <tr width="100%">
-                    <td >Student Name AAAAABBBBBBBBBBBBBBBBBBBBBBBBaA</td>
+                    <td >Student Name</td>
                     <td ><input type="text" name="Name"></td>
                 </tr>
                 <tr>
