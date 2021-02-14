@@ -1,9 +1,9 @@
-Welcome to our Final-Project web site 
+Welcome to our Final-Project web site !!
 <%@ page import="java.sql.*" %> 
 <%@ page import="java.io.*" %> 
 <html> 
     <head> 
-        <title>Create table in mysql database using jsp By Yariv</title>
+        <title>Create table in mysql database using jsp By Eyal and Yariv</title>
     </head> 
     <body bgcolor="#ffffcc">
         <form action="show_data.jsp" method="get">
